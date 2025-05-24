@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.1/tesseract.min.js"></script>
+    <link rel="stylesheet" href="testenv.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Szerviz Számla OCR</h1>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Kattints ide vagy húzd ide a képet</div>
+                <div class="upload-subtext">PNG, JPG vagy JPEG formátum támogatott</div>
+            </div>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            <div class="btn-parent-container">
+                <button class="btn" id="processBtn" style="display: none;">Feldolgozás indítása</button>
+            </div>
+        </div>
+
+        <div class="preview-section hidden" id="previewSection">
+            <img id="previewImage" class="preview-image" alt="Feltöltött kép">
+        </div>
+
+        <div class="progress-section hidden" id="progressSection">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Feldolgozás...</div>
+        </div>
+
+        <div class="results-section hidden" id="resultsSection">
+            <div class="result-card">
+                <div class="result-label">Kiállító</div>
+                <div class="result-value" id="kiaillitoResult">-</div>
+            </div>
+            <div class="result-card">
+                <div class="result-label">Végösszeg</div>
+                <div class="result-value" id="vegosszegResult">-</div>
+            </div>
+            <div class="result-card">
+                <div class="result-label">Forgalmi rendszám</div>
+                <div class="result-value" id="forgalmiResult">-</div>
+            </div>
+            <div class="json-output" id="jsonOutput"></div>
+        </div>
+    </div>
+
+    <script src="ocr_script.js"></script>
+</body>
+</html>
