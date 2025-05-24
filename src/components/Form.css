@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #4facfe;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+form select,
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+.upload-area {
+  border: 3px dashed #4facfe;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #f8faff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: #f0f8ff;
+  transform: translateY(-2px);
+}
+
+.upload-area.dragover {
+  border-color: #00f2fe;
+  background: #e6f3ff;
+  transform: scale(1.02);
+}
+
+form button {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 1%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+}
+
+form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-section p {
+  text-align: center;
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
